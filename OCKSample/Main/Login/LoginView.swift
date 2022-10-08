@@ -28,6 +28,7 @@ struct LoginView: View {
     @State var password = ""
     @State var firstName: String = ""
     @State var lastName: String = ""
+    @State var email: String = ""
     @State var signupLoginSegmentValue = 0
 
     var body: some View {
@@ -85,6 +86,13 @@ struct LoginView: View {
                         .background(.white)
                         .cornerRadius(20.0)
                         .shadow(radius: 10.0, x: 20, y: 10)
+                    
+                    TextField("Email", text:$email)
+                        .padding()
+                        .background(.white)
+                        .cornerRadius(20.0)
+                        .shadow(radius: 10.0, x: 20, y: 10)
+
                 default:
                     EmptyView()
                 }
@@ -103,7 +111,8 @@ struct LoginView: View {
                                                username: usersname,
                                                password: password,
                                                firstName: firstName,
-                                               lastName: lastName)
+                                               lastName: lastName,
+                                               email: email)
                     }
                 default:
                     Task {
