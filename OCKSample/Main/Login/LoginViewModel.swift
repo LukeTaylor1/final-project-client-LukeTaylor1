@@ -145,7 +145,7 @@ class LoginViewModel: ObservableObject {
                 password: String,
                 firstName: String,
                 lastName: String,
-                email: String) async {
+                email: String? = nil) async {
         do {
             guard try await PCKUtility.isServerAvailable() else {
                 Logger.login.error("Server health is not \"ok\"")
