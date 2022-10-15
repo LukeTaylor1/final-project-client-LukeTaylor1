@@ -34,14 +34,15 @@ struct LoginView: View {
     var body: some View {
         VStack {
             // Change the title to the name of your application
-            Text("CareKit Sample App")
-                .font(.largeTitle)
+            Text("Quench")
+                .font(.system(size: 40, weight: .heavy, design: .default))
                 .foregroundColor(.white)
                 .padding()
+                .shadow(radius: 10)
             // Change this image to something that represents your application
-            Image("exercise.jpg")
+            Image("logo.png")
                 .resizable()
-                .frame(width: 150, height: 150, alignment: .center)
+                .frame(width: 200, height: 200, alignment: .center)
                 .clipShape(Circle())
                 .overlay(Circle().stroke(Color(.white), lineWidth: 4))
                 .shadow(radius: 10)
