@@ -10,7 +10,7 @@ import Foundation
 import CareKitUI
 
 struct AppearanceStyle: OCKAppearanceStyler {
-    var opacity1: CGFloat { 0.95 }
+    var opacity1: CGFloat { 0.50 }
     var shadowOpacity1: Float { 0.10 }
     var shadowRadius1: CGFloat { 9 }
     var shadowOffset1: CGSize { CGSize(width: 1, height: 3) }

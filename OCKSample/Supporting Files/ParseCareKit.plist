@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>ApplicationID</key>
-	<string>87457f7d7af0ed3d49573aa832c8bb441b5bac47d31bf56da4a7d4ff8121281c</string>
+	<string>afe940107f669f22b0f86a16d27d6196cb5a57ff4a337ca90d5ed653b40fbb60</string>
 	<key>Server</key>
-	<string>http://dripp-app.herokuapp.com/parse</string>
+	<string>https://dripp2.herokuapp.com/parse</string>
 	<key>LiveQueryServer</key>
 	<string></string>
 	<key>UseTransactions</key>
