@@ -175,7 +175,8 @@ class CareViewController: OCKDailyPageViewController {
                                     on date: Date) -> [UIViewController]? {
         switch task.id {
         case TaskID.steps:
-            let linkView = LinkView(title: .init("My Link"), links: [.website("http://www.engr.uky.edu/research-faculty/departments/computer-science", title: "College of Engineering Department of Computer Science")])
+            let linkView = LinkView(title: .init("Link to Engineering Website"), links: [.website("http://www.engr.uky.edu/research-faculty/departments/computer-science", title: "College of Engineering Department of Computer Science")])
+            
             let view = NumericProgressTaskView(
                 task: task,
                 eventQuery: OCKEventQuery(for: date),
