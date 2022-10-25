@@ -18,10 +18,48 @@ struct ProfileView: View {
     @State var firstName = ""
     @State var lastName = ""
     @State var birthday = Date()
+    
+    
+    @State var selectedTask = "CareKit Task"
+    let tasks = ["CareKit Task",  "HealthKit Task"]
+    @State var showingAdvanceOptions = false
+    @State var CareKitTaskTitle = ""
+    @State var CareKitTaskInstructions = ""
+    @State var HealthKitTaskTitle = ""
+    @State var HealthKitTaskInstuctions = ""
+    
 
     var body: some View {
         VStack {
             VStack(alignment: .leading) {
+                
+                // Added lines below from: https://www.hackingwithswift.com/quick-start/swiftui/pickers-in-forms
+                NavigationView{
+                    Form{
+                        Picker("Task", selection: $selectedTask){
+                            ForEach(tasks, id: \.self){
+                                Text($0)
+                            }
+                        }
+                        .pickerStyle(.automatic)
+                    }
+                } .navigationTitle("Select Type of task")
+                // End of Wrapping
+                Form{
+                    switch selectedTask {
+                    case "CareKit Task":
+                        TextField("CT Title", text: $CareKitTaskTitle)
+                        TextField("Task Instuction", text: $CareKitTaskInstructions)
+                    case "HealthKit Task":
+                        TextField("hK Title", text:$HealthKitTaskTitle)
+                        TextField("Task Instructions", text: $HealthKitTaskInstuctions)
+                    default:
+                        TextField("CT Title", text: $CareKitTaskTitle)
+                        TextField("Task Instructions", text: $CareKitTaskInstructions)
+                    }
+                }
+    
+                
                 TextField("First Name", text: $firstName)
                     .padding()
                     .cornerRadius(20.0)
