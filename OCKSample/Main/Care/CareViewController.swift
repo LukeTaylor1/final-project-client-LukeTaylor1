@@ -175,6 +175,7 @@ class CareViewController: OCKDailyPageViewController {
                                     on date: Date) -> [UIViewController]? {
         switch task.id {
         case TaskID.steps:
+            let linkView = LinkView(title: .init("My Link"), links: [.website("http://www.engr.uky.edu/research-faculty/departments/computer-science", title: "College of Engineering Department of Computer Science")])
             let view = NumericProgressTaskView(
                 task: task,
                 eventQuery: OCKEventQuery(for: date),
@@ -182,7 +183,7 @@ class CareViewController: OCKDailyPageViewController {
                 .padding([.vertical], 20)
                 .careKitStyle(CustomStylerKey.defaultValue)
 
-            return [view.formattedHostingController()]
+            return [view.formattedHostingController(), linkView.formattedHostingController()]
         case TaskID.stretch:
             return [OCKInstructionsTaskViewController(task: task,
                                                      eventQuery: .init(for: date),
