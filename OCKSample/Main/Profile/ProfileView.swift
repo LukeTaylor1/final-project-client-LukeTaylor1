@@ -27,12 +27,29 @@ struct ProfileView: View {
     @State var CareKitTaskInstructions = ""
     @State var HealthKitTaskTitle = ""
     @State var HealthKitTaskInstuctions = ""
+    @State var isPresentingAddTask = false
     
 
     var body: some View {
         VStack {
             VStack(alignment: .leading) {
-                
+                NavigationView {
+                    Text("Hello")
+                    .toolbar {
+                            ToolbarItem(placement: .navigationBarLeading){
+                                Button("Add Task"){
+                                    Task {
+                                        self.isPresentingAddTask.toggle()
+                                    }
+                                }
+                                Label("Add Task", systemImage: "plus")
+                            }
+                        }
+                    .sheet(isPresented: $isPresentingAddTask) {
+                        TaskView()
+                    }
+                }
+                /*
                 // Added lines below from: https://www.hackingwithswift.com/quick-start/swiftui/pickers-in-forms
                 NavigationView{
                     Form{
@@ -58,8 +75,7 @@ struct ProfileView: View {
                         TextField("Task Instructions", text: $CareKitTaskInstructions)
                     }
                 }
-    
-                
+                 */
                 TextField("First Name", text: $firstName)
                     .padding()
                     .cornerRadius(20.0)
@@ -74,7 +90,12 @@ struct ProfileView: View {
                     .padding()
                     .cornerRadius(20.0)
                     .shadow(radius: 10.0, x: 20, y: 10)
+            } .toolbar {
+                ToolbarItem(placement: .navigationBarLeading){
+                    Label("Add Task", systemImage: "plus")
+                }
             }
+
 
             Button(action: {
                 Task {
@@ -111,7 +132,10 @@ struct ProfileView: View {
             })
             .background(Color(.red))
             .cornerRadius(15)
-        }.onReceive(viewModel.$patient, perform: { patient in
+        }
+        
+        
+        .onReceive(viewModel.$patient, perform: { patient in
             if let currentFirstName = patient?.name.givenName {
                 firstName = currentFirstName
             }
