@@ -9,8 +9,36 @@
 import SwiftUI
 
 struct TaskView: View {
+    @StateObject var viewModel = TaskViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            Form {
+                TextField("Title",
+                          text: $viewModel.title)
+                TextField("Instructions",
+                          text: $viewModel.instructions)
+                Picker("Card View",
+                       selection: $viewModel.selectedCard) {
+                    ForEach(CareKitCard.allCases){ item in
+                        Text(item.rawValue)}
+                }
+            }
+            Section("Task") {
+                Button("Add") {
+                    Task {
+                        await viewModel.addTask()
+                    }
+                }
+            }
+            Section("HealthKitTask") {
+                Button("Add") {
+                    Task {
+                        await viewModel.addHealthKitTask()
+                    }
+                }
+            }
+        }
     }
 }
 
