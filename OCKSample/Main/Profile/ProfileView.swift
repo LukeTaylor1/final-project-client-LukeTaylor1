@@ -18,26 +18,24 @@ struct ProfileView: View {
     @State var firstName = ""
     @State var lastName = ""
     @State var birthday = Date()
-    
-    
+
     @State var selectedTask = "CareKit Task"
-    let tasks = ["CareKit Task",  "HealthKit Task"]
+    let tasks = ["CareKit Task", "HealthKit Task"]
     @State var showingAdvanceOptions = false
-    @State var CareKitTaskTitle = ""
-    @State var CareKitTaskInstructions = ""
-    @State var HealthKitTaskTitle = ""
-    @State var HealthKitTaskInstuctions = ""
+    @State var careKitTaskTitle = ""
+    @State var careKitTaskInstructions = ""
+    @State var healthKitTaskTitle = ""
+    @State var healthKitTaskInstuctions = ""
     @State var isPresentingAddTask = false
-    
 
     var body: some View {
         VStack {
             VStack(alignment: .leading) {
                 NavigationView {
-                    Text("Hello")
+                    Text("")
                     .toolbar {
-                            ToolbarItem(placement: .navigationBarLeading){
-                                Button("Add Task"){
+                            ToolbarItem(placement: .navigationBarLeading) {
+                                Button("Add Task") {
                                     Task {
                                         self.isPresentingAddTask.toggle()
                                     }
@@ -49,33 +47,7 @@ struct ProfileView: View {
                         TaskView()
                     }
                 }
-                /*
-                // Added lines below from: https://www.hackingwithswift.com/quick-start/swiftui/pickers-in-forms
-                NavigationView{
-                    Form{
-                        Picker("Task", selection: $selectedTask){
-                            ForEach(tasks, id: \.self){
-                                Text($0)
-                            }
-                        }
-                        .pickerStyle(.automatic)
-                    }
-                } .navigationTitle("Select Type of task")
-                // End of Wrapping
-                Form{
-                    switch selectedTask {
-                    case "CareKit Task":
-                        TextField("CT Title", text: $CareKitTaskTitle)
-                        TextField("Task Instuction", text: $CareKitTaskInstructions)
-                    case "HealthKit Task":
-                        TextField("hK Title", text:$HealthKitTaskTitle)
-                        TextField("Task Instructions", text: $HealthKitTaskInstuctions)
-                    default:
-                        TextField("CT Title", text: $CareKitTaskTitle)
-                        TextField("Task Instructions", text: $CareKitTaskInstructions)
-                    }
-                }
-                 */
+
                 TextField("First Name", text: $firstName)
                     .padding()
                     .cornerRadius(20.0)
@@ -91,11 +63,10 @@ struct ProfileView: View {
                     .cornerRadius(20.0)
                     .shadow(radius: 10.0, x: 20, y: 10)
             } .toolbar {
-                ToolbarItem(placement: .navigationBarLeading){
+                ToolbarItem(placement: .navigationBarLeading) {
                     Label("Add Task", systemImage: "plus")
                 }
             }
-
 
             Button(action: {
                 Task {
@@ -133,8 +104,7 @@ struct ProfileView: View {
             .background(Color(.red))
             .cornerRadius(15)
         }
-        
-        
+
         .onReceive(viewModel.$patient, perform: { patient in
             if let currentFirstName = patient?.name.givenName {
                 firstName = currentFirstName

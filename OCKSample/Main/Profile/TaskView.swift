@@ -9,13 +9,41 @@
 import SwiftUI
 
 struct TaskView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+    @StateObject var viewModel = TaskViewModel()
 
-struct TaskView_Previews: PreviewProvider {
-    static var previews: some View {
-        TaskView()
-    }
-}
+         var body: some View {
+             NavigationView {
+                 Form {
+                     TextField("Title",
+                               text: $viewModel.title)
+                     TextField("Instructions",
+                               text: $viewModel.instructions)
+                     Picker("Card View", selection: $viewModel.selectedCard) {
+                         ForEach(CareKitCard.allCases) { item in
+                             Text(item.rawValue)
+                         }
+                     }
+                     Section("Task") {
+                         Button("Add") {
+                             Task {
+                                 await viewModel.addTask()
+                             }
+                         }
+                     }
+                     Section("HealthKitTask") {
+                         Button("Add") {
+                             Task {
+                                 await viewModel.addHealthKitTask()
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+     }
+
+ struct TaskView_Previews: PreviewProvider {
+     static var previews: some View {
+         TaskView()
+     }
+ }
