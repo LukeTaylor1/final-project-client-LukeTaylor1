@@ -8,10 +8,11 @@
 import Foundation
 import CareKitStore
 import os.log
-
+import CareKit
  class TaskViewModel: ObservableObject {
      @Published var title = ""
      @Published var instructions = ""
+     @Published var endDate = Date()
      @Published var selectedCard: CareKitCard = .button
      @Published var error: AppError? {
          willSet {
@@ -74,6 +75,7 @@ import os.log
              NotificationCenter.default.post(.init(name: Notification.Name(rawValue: Constants.shouldRefreshView)))
              // Ask HealthKit store for permissions after each new task
              Utility.requestHealthKitPermissions()
+
          } catch {
              self.error = AppError.errorString("Couldn't add task: \(error.localizedDescription)")
          }

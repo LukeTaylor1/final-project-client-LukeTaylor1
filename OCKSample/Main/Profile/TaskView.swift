@@ -18,6 +18,9 @@ struct TaskView: View {
                                text: $viewModel.title)
                      TextField("Instructions",
                                text: $viewModel.instructions)
+                     DatePicker(selection: $viewModel.endDate, in: Date()..., displayedComponents: .date) {
+                         Text("Select End Date")
+                     }
                      Picker("Card View", selection: $viewModel.selectedCard) {
                          ForEach(CareKitCard.allCases) { item in
                              Text(item.rawValue)
