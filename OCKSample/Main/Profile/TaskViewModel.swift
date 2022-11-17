@@ -29,7 +29,7 @@ import CareKit
              return
          }
          let uniqueId = UUID().uuidString // Create a unique id for each task
-         var task = OCKTask(id: uniqueId,
+         var newTask = OCKTask(id: uniqueId,
                             title: title,
                             carePlanUUID: nil,
                             schedule: .dailyAtTime(hour: 0,
@@ -37,11 +37,18 @@ import CareKit
                                                    start: Date(),
                                                    end: nil,
                                                    text: nil))
-         task.instructions = instructions
-         task.card = selectedCard
+         if instructions != newTask.instructions {
+             newTask.instructions = instructions
+         }
+
+         if title != newTask.title {
+             newTask.title = title
+         }
+
+         newTask.card = selectedCard
          do {
-             try await appDelegate.storeManager.addTasksIfNotPresent([task])
-             Logger.task.info("Saved task: \(task.id, privacy: .private)")
+             try await appDelegate.storeManager.addTasksIfNotPresent([newTask])
+             Logger.task.info("Saved task: \(newTask.id, privacy: .private)")
              // Notify views they should refresh tasks if needed
              NotificationCenter.default.post(.init(name: Notification.Name(rawValue: Constants.shouldRefreshView)))
          } catch {

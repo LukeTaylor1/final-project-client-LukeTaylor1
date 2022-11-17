@@ -27,5 +27,5 @@ extension Logger {
                                                     category: "OCKSynchronizedStoreManager+Extension")
     static let ockHealthKitPassthroughStore = Logger(subsystem: subsystem,
                                                      category: "OCKHealthKitPassthroughStore+Extension")
-    static let task = Logger(subsystem: subsystem, category: "Task")
+    static let task = Logger(subsystem: subsystem, category: "task")
 }

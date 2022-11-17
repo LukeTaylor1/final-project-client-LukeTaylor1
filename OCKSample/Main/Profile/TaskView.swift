@@ -11,6 +11,9 @@ import SwiftUI
 struct TaskView: View {
     @StateObject var viewModel = TaskViewModel()
 
+    // options for care view cards
+    var cardViewList = [CareKitCard.button, CareKitCard.checklist, CareKitCard.instruction]
+
          var body: some View {
              NavigationView {
                  Form {
@@ -22,7 +25,7 @@ struct TaskView: View {
                          Text("Select End Date")
                      }
                      Picker("Card View", selection: $viewModel.selectedCard) {
-                         ForEach(CareKitCard.allCases) { item in
+                         ForEach(cardViewList) { item in
                              Text(item.rawValue)
                          }
                      }
