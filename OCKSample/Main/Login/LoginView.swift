@@ -87,8 +87,8 @@ struct LoginView: View {
                         .background(.white)
                         .cornerRadius(20.0)
                         .shadow(radius: 10.0, x: 20, y: 10)
-                    
-                    TextField("Email", text:$email)
+
+                    TextField("Email", text: $email)
                         .padding()
                         .background(.white)
                         .cornerRadius(20.0)

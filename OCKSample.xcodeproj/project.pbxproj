@@ -111,6 +111,12 @@
 		F2BE7AA728FB34BF007CCEA2 /* DimensionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE7AA528FB34BF007CCEA2 /* DimensionStyle.swift */; };
 		F2BE7AA928FB386D007CCEA2 /* AnimationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE7AA828FB386D007CCEA2 /* AnimationStyle.swift */; };
 		F2BE7AAA28FB386D007CCEA2 /* AnimationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE7AA828FB386D007CCEA2 /* AnimationStyle.swift */; };
+		F2F8A6E0293FEC1500614D45 /* CustomContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F8A6DF293FEC1500614D45 /* CustomContactViewController.swift */; };
+		F2F8A6E2293FF2C600614D45 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F8A6E1293FF2C600614D45 /* ProfileImageView.swift */; };
+		F2F8A6E4293FF31700614D45 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F8A6E3293FF31700614D45 /* ImagePicker.swift */; };
+		F2F8A6E6293FF36F00614D45 /* OCKBiologicalSex+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F8A6E5293FF36F00614D45 /* OCKBiologicalSex+Hashable.swift */; };
+		F2F8A6E9293FF3CE00614D45 /* MyContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F8A6E8293FF3CE00614D45 /* MyContactView.swift */; };
+		F2F8A6EB293FF40500614D45 /* MyContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F8A6EA293FF40500614D45 /* MyContactViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -233,6 +239,12 @@
 		F2BE7AA228FB31D5007CCEA2 /* AppearanceStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceStyle.swift; sourceTree = "<group>"; };
 		F2BE7AA528FB34BF007CCEA2 /* DimensionStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimensionStyle.swift; sourceTree = "<group>"; };
 		F2BE7AA828FB386D007CCEA2 /* AnimationStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationStyle.swift; sourceTree = "<group>"; };
+		F2F8A6DF293FEC1500614D45 /* CustomContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomContactViewController.swift; sourceTree = "<group>"; };
+		F2F8A6E1293FF2C600614D45 /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
+		F2F8A6E3293FF31700614D45 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		F2F8A6E5293FF36F00614D45 /* OCKBiologicalSex+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OCKBiologicalSex+Hashable.swift"; sourceTree = "<group>"; };
+		F2F8A6E8293FF3CE00614D45 /* MyContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContactView.swift; sourceTree = "<group>"; };
+		F2F8A6EA293FF40500614D45 /* MyContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,10 +349,13 @@
 		7030887C258272E700FFABB6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				F2F8A6E7293FF39300614D45 /* MyContact */,
 				7036E4C8256E1A6F006E9A3C /* ProfileView.swift */,
 				7036E516256F2413006E9A3C /* ProfileViewModel.swift */,
 				F28BEC91291354EC00D6862A /* TaskView.swift */,
 				F28BEC932913564700D6862A /* TaskViewModel.swift */,
+				F2F8A6E1293FF2C600614D45 /* ProfileImageView.swift */,
+				F2F8A6E3293FF31700614D45 /* ImagePicker.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -349,6 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				7036E4CD256E9A0C006E9A3C /* ContactView.swift */,
+				F2F8A6DF293FEC1500614D45 /* CustomContactViewController.swift */,
 			);
 			path = Contact;
 			sourceTree = "<group>";
@@ -458,6 +474,7 @@
 				70F03A962786098F00E5AFB4 /* OCKStore.swift */,
 				70F03A9827860A0800E5AFB4 /* OCKSynchronizedStoreManager+Publishers.swift */,
 				7083A855279CA40A00B3832E /* PCKUtility.swift */,
+				F2F8A6E5293FF36F00614D45 /* OCKBiologicalSex+Hashable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -549,6 +566,15 @@
 				70F921AA27CABDE900368CEC /* WatchConnectivity */,
 			);
 			path = OCKSample;
+			sourceTree = "<group>";
+		};
+		F2F8A6E7293FF39300614D45 /* MyContact */ = {
+			isa = PBXGroup;
+			children = (
+				F2F8A6E8293FF3CE00614D45 /* MyContactView.swift */,
+				F2F8A6EA293FF40500614D45 /* MyContactViewController.swift */,
+			);
+			path = MyContact;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -785,6 +811,7 @@
 				70F921AC27CABE3000368CEC /* SessionDelegate.swift in Sources */,
 				70F0EFEA28C2EE6C0005B5A2 /* AppDelegateKey.swift in Sources */,
 				7036E64025717F85006E9A3C /* Constants.swift in Sources */,
+				F2F8A6E2293FF2C600614D45 /* ProfileImageView.swift in Sources */,
 				918FDEBC271B4E4A0045A0EF /* Calendar+Dates.swift in Sources */,
 				70F03AA127860AB700E5AFB4 /* OCKOutcome.swift in Sources */,
 				7036E4CE256E9A0C006E9A3C /* ContactView.swift in Sources */,
@@ -796,7 +823,9 @@
 				70F921A827CA9A3A00368CEC /* CustomStylerKey.swift in Sources */,
 				F2BE7AA628FB34BF007CCEA2 /* DimensionStyle.swift in Sources */,
 				70221F3428D8ABBE00971195 /* AppDelegate+UIApplicationDelegate.swift in Sources */,
+				F2F8A6EB293FF40500614D45 /* MyContactViewController.swift in Sources */,
 				9169381D271B650700A634ED /* ColorStyler.swift in Sources */,
+				F2F8A6E0293FEC1500614D45 /* CustomContactViewController.swift in Sources */,
 				E72B2C0A226939E3009A9438 /* AppDelegate.swift in Sources */,
 				7036E4C4256E0A48006E9A3C /* CareView.swift in Sources */,
 				70F921B027CABED600368CEC /* LocalSyncSessionDelegate.swift in Sources */,
@@ -808,6 +837,8 @@
 				70F0EFE828C2EC050005B5A2 /* OCKSampleApp.swift in Sources */,
 				918FDEB7271B41FF0045A0EF /* Logger.swift in Sources */,
 				70F03A9F27860A8800E5AFB4 /* OCKOutcomeValue+Identifiable.swift in Sources */,
+				F2F8A6E9293FF3CE00614D45 /* MyContactView.swift in Sources */,
+				F2F8A6E6293FF36F00614D45 /* OCKBiologicalSex+Hashable.swift in Sources */,
 				F2BE7AA928FB386D007CCEA2 /* AnimationStyle.swift in Sources */,
 				70221F2A28D7BE0600971195 /* AppDelegate+ParseRemoteDelegate.swift in Sources */,
 				7036E4D3256EBE35006E9A3C /* MainView.swift in Sources */,
@@ -822,6 +853,7 @@
 				70F921AE27CABE7700368CEC /* RemoteSessionDelegate.swift in Sources */,
 				70F03A952786093B00E5AFB4 /* OCKHealthKitPassthroughStore.swift in Sources */,
 				7036E4BF256DA089006E9A3C /* LoginViewModel.swift in Sources */,
+				F2F8A6E4293FF31700614D45 /* ImagePicker.swift in Sources */,
 				F28BEC942913564700D6862A /* TaskViewModel.swift in Sources */,
 				7036E517256F2413006E9A3C /* ProfileViewModel.swift in Sources */,
 			);
