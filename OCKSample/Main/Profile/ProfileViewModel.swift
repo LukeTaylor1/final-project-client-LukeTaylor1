@@ -19,7 +19,7 @@ class ProfileViewModel: ObservableObject {
     // MARK: Public read, private write properties
     @Published var firstName = ""
     @Published var lastName = ""
-    @Published var allergies = ""
+    @Published var allergies = [""]
     @Published var birthday = Date()
     @Published var sex: OCKBiologicalSex = .other("other")
     @Published var sexOtherField = "other"
@@ -28,6 +28,10 @@ class ProfileViewModel: ObservableObject {
     @Published var city = ""
     @Published var state = ""
     @Published var zipcode = ""
+    @Published var emailAddress = ""
+    @Published var messagingNumbers = ""
+    @Published var phoneNumber = ""
+    @Published var otherContactInfo = ""
     @Published var isShowingSaveAlert = false
     @Published var isPresentingAddTask = false
     @Published var isPresentingContact = false
@@ -81,6 +85,11 @@ class ProfileViewModel: ObservableObject {
                 birthday = currentBirthday
             } else {
                 birthday = Date()
+            }
+            if let currentAllergy = newValue?.allergies {
+                allergies = currentAllergy
+            } else {
+                allergies = [""]
             }
         }
     }
@@ -284,6 +293,10 @@ class ProfileViewModel: ObservableObject {
                  patientHasBeenUpdated = true
                  patientToUpdate.sex = sex
              }
+             if patient?.allergies != allergies {
+                 patientHasBeenUpdated = true
+                 patientToUpdate.allergies = allergies
+             }
 
              let notes = [OCKNote(author: firstName,
                                   title: "New Note",
@@ -347,11 +360,13 @@ class ProfileViewModel: ObservableObject {
              potentialAddress.city = city
              potentialAddress.state = state
              potentialAddress.postalCode = zipcode
+             
 
              if contact?.address != potentialAddress {
                  contactHasBeenUpdated = true
                  contactToUpdate.address = potentialAddress
              }
+             
 
              if contactHasBeenUpdated {
                  let updated = try await storeManager.store.updateAnyContact(contactToUpdate)
