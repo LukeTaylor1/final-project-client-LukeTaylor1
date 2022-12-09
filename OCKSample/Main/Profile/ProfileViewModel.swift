@@ -86,11 +86,12 @@ class ProfileViewModel: ObservableObject {
             } else {
                 birthday = Date()
             }
+            /* fix dis
             if let currentAllergy = newValue?.allergies {
                 allergies = currentAllergy
             } else {
                 allergies = [""]
-            }
+            }*/
         }
     }
     private var contact: OCKContact? // todo: need to publish contact updates like patient
@@ -293,10 +294,12 @@ class ProfileViewModel: ObservableObject {
                  patientHasBeenUpdated = true
                  patientToUpdate.sex = sex
              }
+             /* fix dis
              if patient?.allergies != allergies {
                  patientHasBeenUpdated = true
                  patientToUpdate.allergies = allergies
              }
+              */
 
              let notes = [OCKNote(author: firstName,
                                   title: "New Note",
@@ -360,13 +363,11 @@ class ProfileViewModel: ObservableObject {
              potentialAddress.city = city
              potentialAddress.state = state
              potentialAddress.postalCode = zipcode
-             
 
              if contact?.address != potentialAddress {
                  contactHasBeenUpdated = true
                  contactToUpdate.address = potentialAddress
              }
-             
 
              if contactHasBeenUpdated {
                  let updated = try await storeManager.store.updateAnyContact(contactToUpdate)

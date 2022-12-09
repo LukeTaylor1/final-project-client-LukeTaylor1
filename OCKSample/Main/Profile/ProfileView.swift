@@ -35,19 +35,19 @@ struct ProfileView: View {
                                 Text(viewModel.sex.rawValue)
                                     .tag(OCKBiologicalSex.other(viewModel.sexOtherField))
                             }
-                            TextField("Allergies", text: $viewModel.allergies as! String)
+                            // TextField("Allergies", text: $viewModel.allergies as! Binding<String>)
                         }
                         Section(header: Text("Contact")) {
                             TextField("Street", text: $viewModel.street)
                             TextField("City", text: $viewModel.city)
                             TextField("State", text: $viewModel.state)
                             TextField("Postal code", text: $viewModel.zipcode)
-                            
+
                             TextField("Email Address", text: $viewModel.emailAddress)
                             TextField("Messaging Numbers", text: $viewModel.messagingNumbers)
                             TextField("Phone Number", text: $viewModel.phoneNumber)
-                            TextField("Other Contact Info", $viewModel.otherContactInfo)
-                            
+                            TextField("Other Contact Info", text: $viewModel.otherContactInfo)
+
                         }
                     }
                 }
