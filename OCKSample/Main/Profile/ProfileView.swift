@@ -35,7 +35,7 @@ struct ProfileView: View {
                                 Text(viewModel.sex.rawValue)
                                     .tag(OCKBiologicalSex.other(viewModel.sexOtherField))
                             }
-                            TextField("Allergies", text: $viewModel.allergies as! String)
+                            //TextField("Allergies", text: $viewModel.allergies as! String)
                         }
                         Section(header: Text("Contact")) {
                             TextField("Street", text: $viewModel.street)
@@ -46,7 +46,7 @@ struct ProfileView: View {
                             TextField("Email Address", text: $viewModel.emailAddress)
                             TextField("Messaging Numbers", text: $viewModel.messagingNumbers)
                             TextField("Phone Number", text: $viewModel.phoneNumber)
-                            TextField("Other Contact Info", $viewModel.otherContactInfo)
+                            TextField("Other Contact Info", text: $viewModel.otherContactInfo)
                             
                         }
                     }
