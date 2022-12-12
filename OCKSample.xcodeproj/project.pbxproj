@@ -10,8 +10,6 @@
 		5173CB8A23C3A846007655A0 /* OCKSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5173CB8923C3A846007655A0 /* OCKSampleUITests.swift */; };
 		6E8F4CFA2946D0EE0032E194 /* Consent .swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8F4CF92946D0EE0032E194 /* Consent .swift */; };
 		6E8F4CFB2946D0EE0032E194 /* Consent .swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8F4CF92946D0EE0032E194 /* Consent .swift */; };
-		6E8F4CFD2946D11F0032E194 /* Surveys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8F4CFC2946D11F0032E194 /* Surveys.swift */; };
-		6E8F4CFE2946D11F0032E194 /* Surveys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8F4CFC2946D11F0032E194 /* Surveys.swift */; };
 		70077597252228E900EC0EDA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70077596252228E900EC0EDA /* User.swift */; };
 		7007759B252229C900EC0EDA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70077596252228E900EC0EDA /* User.swift */; };
 		70202EC12807333900CF73FB /* CareKit in Frameworks */ = {isa = PBXBuildFile; productRef = 70202EC02807333900CF73FB /* CareKit */; };
@@ -127,15 +125,13 @@
 		F24226502947023800348317 /* OCKHealthTask+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F242264F2947023800348317 /* OCKHealthTask+Custom.swift */; };
 		F24226512947023800348317 /* OCKHealthTask+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F242264F2947023800348317 /* OCKHealthTask+Custom.swift */; };
 		F24226532947074900348317 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24226522947074900348317 /* CardViewModel.swift */; };
-		F24226542947074900348317 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24226522947074900348317 /* CardViewModel.swift */; };
 		F2422656294707B000348317 /* CustomFeatureContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2422655294707B000348317 /* CustomFeatureContentView.swift */; };
 		F2422657294707B000348317 /* CustomFeatureContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2422655294707B000348317 /* CustomFeatureContentView.swift */; };
 		F242265929470C2B00348317 /* OCKEventAggregator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F242265829470C2B00348317 /* OCKEventAggregator.swift */; };
 		F242265A29470C2B00348317 /* OCKEventAggregator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F242265829470C2B00348317 /* OCKEventAggregator.swift */; };
 		F242265C29470C8900348317 /* OCKAnyOutcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F242265B29470C8900348317 /* OCKAnyOutcome.swift */; };
 		F242265D29470C8900348317 /* OCKAnyOutcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F242265B29470C8900348317 /* OCKAnyOutcome.swift */; };
-		F242265F29470CEB00348317 /* OCKTaskEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = F242265E29470CEB00348317 /* OCKTaskEvents.swift */; };
-		F242266029470CEB00348317 /* OCKTaskEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = F242265E29470CEB00348317 /* OCKTaskEvents.swift */; };
+		F24226612947168100348317 /* OCKTaskEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = F242265E29470CEB00348317 /* OCKTaskEvents.swift */; };
 		F28BEC92291354EC00D6862A /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28BEC91291354EC00D6862A /* TaskView.swift */; };
 		F28BEC942913564700D6862A /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28BEC932913564700D6862A /* TaskViewModel.swift */; };
 		F2BE7AA328FB31D6007CCEA2 /* AppearanceStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE7AA228FB31D5007CCEA2 /* AppearanceStyle.swift */; };
@@ -159,13 +155,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = E72B2C05226939E3009A9438;
 			remoteInfo = OCKSample;
-		};
-		91AD924924A4C42E00925D4D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E72B2BFE226939E3009A9438 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 91AD922624A4C42B00925D4D;
-			remoteInfo = OCKWatchSample;
 		};
 		F24226302946F11200348317 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -216,7 +205,6 @@
 		5173CB8B23C3A846007655A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51F6343923D2877B00FE576E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		6E8F4CF92946D0EE0032E194 /* Consent .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consent .swift"; sourceTree = "<group>"; };
-		6E8F4CFC2946D11F0032E194 /* Surveys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surveys.swift; sourceTree = "<group>"; };
 		70077596252228E900EC0EDA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		70221F2728D7809800971195 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		70221F2928D7BE0600971195 /* AppDelegate+ParseRemoteDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+ParseRemoteDelegate.swift"; sourceTree = "<group>"; };
@@ -366,7 +354,6 @@
 			isa = PBXGroup;
 			children = (
 				6E8F4CF92946D0EE0032E194 /* Consent .swift */,
-				6E8F4CFC2946D11F0032E194 /* Surveys.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -737,7 +724,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				91AD924A24A4C42E00925D4D /* PBXTargetDependency */,
 			);
 			name = OCKSample;
 			packageProductDependencies = (
@@ -895,7 +881,6 @@
 				70F921B327CAC16E00368CEC /* LocalSyncSessionDelegate.swift in Sources */,
 				F2BE7AA428FB3202007CCEA2 /* AppearanceStyle.swift in Sources */,
 				70221F3928D8C10800971195 /* StoreManagerKey.swift in Sources */,
-				F242266029470CEB00348317 /* OCKTaskEvents.swift in Sources */,
 				70A98D63278A268B009B58F2 /* ColorStyler.swift in Sources */,
 				918FDEB8271B49060045A0EF /* Logger.swift in Sources */,
 				91AD923B24A4C42D00925D4D /* CareView.swift in Sources */,
@@ -908,13 +893,11 @@
 				7075152028DE1BB400A57A0C /* LoginView.swift in Sources */,
 				F242265D29470C8900348317 /* OCKAnyOutcome.swift in Sources */,
 				70F921B227CAC16E00368CEC /* RemoteSessionDelegate.swift in Sources */,
-				6E8F4CFE2946D11F0032E194 /* Surveys.swift in Sources */,
 				F24226452946FCFB00348317 /* Surveyable.swift in Sources */,
 				70221F2F28D7CDE400971195 /* AppDelegate+ParseRemoteDelegate.swift in Sources */,
 				7083A857279CA40F00B3832E /* PCKUtility.swift in Sources */,
 				6E8F4CFB2946D0EE0032E194 /* Consent .swift in Sources */,
 				91AD923924A4C42D00925D4D /* OCKWatchSampleApp.swift in Sources */,
-				F24226542947074900348317 /* CardViewModel.swift in Sources */,
 				70F03AA627860B2500E5AFB4 /* OCKPatient+Parse.swift in Sources */,
 				F24226512947023800348317 /* OCKHealthTask+Custom.swift in Sources */,
 				F242265A29470C2B00348317 /* OCKEventAggregator.swift in Sources */,
@@ -972,7 +955,7 @@
 				70221F3428D8ABBE00971195 /* AppDelegate+UIApplicationDelegate.swift in Sources */,
 				F2F8A6EB293FF40500614D45 /* MyContactViewController.swift in Sources */,
 				9169381D271B650700A634ED /* ColorStyler.swift in Sources */,
-				F242265F29470CEB00348317 /* OCKTaskEvents.swift in Sources */,
+				F24226612947168100348317 /* OCKTaskEvents.swift in Sources */,
 				F2F8A6E0293FEC1500614D45 /* CustomContactViewController.swift in Sources */,
 				E72B2C0A226939E3009A9438 /* AppDelegate.swift in Sources */,
 				7036E4C4256E0A48006E9A3C /* CareView.swift in Sources */,
@@ -1005,7 +988,6 @@
 				F24226412946FCE300348317 /* Survey.swift in Sources */,
 				7036E4C9256E1A6F006E9A3C /* ProfileView.swift in Sources */,
 				F242263E2946FC4B00348317 /* SurveyViewSynchronizer.swift in Sources */,
-				6E8F4CFD2946D11F0032E194 /* Surveys.swift in Sources */,
 				7083A856279CA40A00B3832E /* PCKUtility.swift in Sources */,
 				F2422656294707B000348317 /* CustomFeatureContentView.swift in Sources */,
 				F24226472946FD0700348317 /* CheckIn.swift in Sources */,
@@ -1028,11 +1010,6 @@
 			isa = PBXTargetDependency;
 			target = E72B2C05226939E3009A9438 /* OCKSample */;
 			targetProxy = 5173CB8C23C3A846007655A0 /* PBXContainerItemProxy */;
-		};
-		91AD924A24A4C42E00925D4D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 91AD922624A4C42B00925D4D /* OCKWatchSample */;
-			targetProxy = 91AD924924A4C42E00925D4D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

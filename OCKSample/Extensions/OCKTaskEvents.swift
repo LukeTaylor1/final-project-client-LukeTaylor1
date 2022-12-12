@@ -36,9 +36,9 @@ extension OCKTaskEvents {
     }
 
     /// The first event detail.
-    var firstEventDetail: String? {
-        ScheduleUtility.scheduleLabel(for: firstEvent)
-    }
+    //var firstEventDetail: String? {
+      //  ScheduleUtility.scheduleLabel(for: firstEvent)
+    //}
 
     /// The first event outcome.
     /// - note: If you need `OCKOutcome` or `OCKHealthKitOutcome`, you need to cast
