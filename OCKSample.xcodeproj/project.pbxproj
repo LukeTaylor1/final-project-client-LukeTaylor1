@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5173CB8A23C3A846007655A0 /* OCKSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5173CB8923C3A846007655A0 /* OCKSampleUITests.swift */; };
+		6E8F4CFA2946D0EE0032E194 /* Consent .swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8F4CF92946D0EE0032E194 /* Consent .swift */; };
+		6E8F4CFB2946D0EE0032E194 /* Consent .swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8F4CF92946D0EE0032E194 /* Consent .swift */; };
+		6E8F4CFD2946D11F0032E194 /* Surveys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8F4CFC2946D11F0032E194 /* Surveys.swift */; };
+		6E8F4CFE2946D11F0032E194 /* Surveys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8F4CFC2946D11F0032E194 /* Surveys.swift */; };
 		70077597252228E900EC0EDA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70077596252228E900EC0EDA /* User.swift */; };
 		7007759B252229C900EC0EDA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70077596252228E900EC0EDA /* User.swift */; };
 		70202EC12807333900CF73FB /* CareKit in Frameworks */ = {isa = PBXBuildFile; productRef = 70202EC02807333900CF73FB /* CareKit */; };
@@ -167,6 +171,8 @@
 		5173CB8923C3A846007655A0 /* OCKSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCKSampleUITests.swift; sourceTree = "<group>"; };
 		5173CB8B23C3A846007655A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51F6343923D2877B00FE576E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		6E8F4CF92946D0EE0032E194 /* Consent .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consent .swift"; sourceTree = "<group>"; };
+		6E8F4CFC2946D11F0032E194 /* Surveys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surveys.swift; sourceTree = "<group>"; };
 		70077596252228E900EC0EDA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		70221F2728D7809800971195 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		70221F2928D7BE0600971195 /* AppDelegate+ParseRemoteDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+ParseRemoteDelegate.swift"; sourceTree = "<group>"; };
@@ -296,6 +302,15 @@
 			path = OCKSampleUITests;
 			sourceTree = "<group>";
 		};
+		6E8F4CF82946D09A0032E194 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				6E8F4CF92946D0EE0032E194 /* Consent .swift */,
+				6E8F4CFC2946D11F0032E194 /* Surveys.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		70221F2B28D7C7C600971195 /* CustomCards */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +340,7 @@
 		703088772582727500FFABB6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				6E8F4CF82946D09A0032E194 /* Onboarding */,
 				70221F2728D7809800971195 /* MainTabView.swift */,
 				7036E4D2256EBE35006E9A3C /* MainView.swift */,
 				70308878258272CD00FFABB6 /* Care */,
@@ -774,8 +790,10 @@
 				91693818271B5E1600A634ED /* Constants.swift in Sources */,
 				7075152028DE1BB400A57A0C /* LoginView.swift in Sources */,
 				70F921B227CAC16E00368CEC /* RemoteSessionDelegate.swift in Sources */,
+				6E8F4CFE2946D11F0032E194 /* Surveys.swift in Sources */,
 				70221F2F28D7CDE400971195 /* AppDelegate+ParseRemoteDelegate.swift in Sources */,
 				7083A857279CA40F00B3832E /* PCKUtility.swift in Sources */,
+				6E8F4CFB2946D0EE0032E194 /* Consent .swift in Sources */,
 				91AD923924A4C42D00925D4D /* OCKWatchSampleApp.swift in Sources */,
 				70F03AA627860B2500E5AFB4 /* OCKPatient+Parse.swift in Sources */,
 				70221F3828D8C0CB00971195 /* AppDelegateKey.swift in Sources */,
@@ -840,6 +858,7 @@
 				F2F8A6E9293FF3CE00614D45 /* MyContactView.swift in Sources */,
 				F2F8A6E6293FF36F00614D45 /* OCKBiologicalSex+Hashable.swift in Sources */,
 				F2BE7AA928FB386D007CCEA2 /* AnimationStyle.swift in Sources */,
+				6E8F4CFA2946D0EE0032E194 /* Consent .swift in Sources */,
 				70221F2A28D7BE0600971195 /* AppDelegate+ParseRemoteDelegate.swift in Sources */,
 				7036E4D3256EBE35006E9A3C /* MainView.swift in Sources */,
 				918FDEC5271B4EA70045A0EF /* StoreManagerKey.swift in Sources */,
@@ -849,6 +868,7 @@
 				70077597252228E900EC0EDA /* User.swift in Sources */,
 				70F03A9927860A0800E5AFB4 /* OCKSynchronizedStoreManager+Publishers.swift in Sources */,
 				7036E4C9256E1A6F006E9A3C /* ProfileView.swift in Sources */,
+				6E8F4CFD2946D11F0032E194 /* Surveys.swift in Sources */,
 				7083A856279CA40A00B3832E /* PCKUtility.swift in Sources */,
 				70F921AE27CABE7700368CEC /* RemoteSessionDelegate.swift in Sources */,
 				70F03A952786093B00E5AFB4 /* OCKHealthKitPassthroughStore.swift in Sources */,
